@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 06 - 02</title>
+</head>
+<body>
+<h1>Formulário de Inscrição</h1>
+<h2>Preencha seus dados</h2>
+<form method="POST" name="formulario" id="formulario" action="#" onsubmit="return envia()">
+    <label for="nome"><strong>Nome:</strong>
+        <input type="text" name="nome" id="nome"/>
+    </label><br/><br/>
+    <label for="email"><strong>E-mail:</strong>
+        <input type="email" name="email" id="email"/>
+    </label><br/><br/>
+    <label for="endereco"><strong>Endereco:</strong>
+        <input type="text" name="endereco" id="endereco"/>
+    </label><br/><br/>
+    <label for="cidade"><strong>Cidade:</strong>
+        <input type="text" name="cidade" id="cidade"/>
+    </label><br/><br/>
+    <label for="ddd"><strong>Telefone:</strong>
+        <input type="text" name="ddd" id="ddd" maxlength="2" size="2"/>
+        <input type="text" name="telefone" id="telefone"/>
+    </label><br/><br/>
+    <label for="usuario"><strong>Usuário:</strong>
+        <input type="text" name="usuario" id="usuario" placeholder="Entre com o seu login"/>
+    </label><br/><br/>
+    <label for="senha"><strong>Senha:</strong>
+        <input type="password" name="senha" id="senha"/>
+    </label><br/>
+    <br/>
+
+    <button type="submit" name="cadastrar" id="cadastrar">Finalizar minha inscrição</button>
+</form>
+<script type="text/javascript">
+    function envia() {
+        if (document.formulario.nome.value == "") {
+            alert("Campo nome não está preenchido");
+            return false;
+        } else if (document.formulario.email.value == "") {
+            alert("Campo email não está preenchido");
+            return false;
+        } else if (document.formulario.endereco.value == "") {
+            alert("Campo endereco não está preenchido");
+            return false;
+        } else if (document.formulario.cidade.value == "") {
+            alert("Campo cidade não está preenchido");
+            return false;
+        } else if (document.formulario.ddd.value == "") {
+            alert("Campo ddd não está preenchido");
+            return false;
+        } else if (document.formulario.telefone.value == "") {
+            alert("Campo telefone não está preenchido");
+            return false;
+        } else if (document.formulario.usuario.value == "") {
+            alert("Campo usuario não está preenchido");
+            return false;
+        } else if (document.formulario.senha.value == "") {
+            alert("Campo senha não está preenchido");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

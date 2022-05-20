@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L02Ex03</title>
+
+    <script type="text/javascript">
+        moto01 = new Image();
+        moto01.src = "img/L02Proj/moto01.jpg";
+
+        moto02 = new Image();
+        moto02.src = "img/L02Proj/moto02.jpg";
+
+        moto03 = new Image();
+        moto03.src = "img/L02Proj/moto03.jpg";
+
+        moto04 = new Image();
+        moto04.src = "img/L02Proj/moto04.jpg";
+
+        moto05 = new Image();
+        moto05.src = "img/L02Proj/moto05.jpg";
+
+        moto01F = new Image();
+        moto01F.src = "img/L02Proj/moto01F.jpg";
+
+        moto02F = new Image();
+        moto02F.src = "img/L02Proj/moto02F.jpg";
+
+        moto03F = new Image();
+        moto03F.src = "img/L02Proj/moto03F.jpg";
+
+        moto04F = new Image();
+        moto04F.src = "img/L02Proj/moto04F.jpg";
+
+        moto05F = new Image();
+        moto05F.src = "img/L02Proj/moto05F.jpg";
+
+        function reload() {
+            window.document['iMoto01'].src = moto01F.src;
+            window.document['iMoto02'].src = moto02F.src;
+            window.document['iMoto03'].src = moto03F.src;
+            window.document['iMoto04'].src = moto04F.src;
+            window.document['iMoto05'].src = moto05F.src;
+        }
+
+        console.log(document.getElementsByName("iMoto01"));
+
+    </script>
+
+    <style type="text/css">
+        #menu {
+            text-align: center;
+        }
+
+        #menu ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        #menu ul li {
+            display: inline;
+        }
+
+        #menu ul li img {
+            padding: 2px 10px;
+            display: inline-block;
+
+            /* visual do link */
+            background-color: #EDEDED;
+            border-radius: 10px;
+            text-decoration: none;
+            border-bottom: 3px solid #EDEDED;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center; " id="painel">
+    <img name="centro" src="img/L02Proj/moto01.jpg"/>
+</div>
+<br/>
+<hr/>
+<nav id="menu">
+    <ul>
+        <li>
+            <a href="#"
+               onclick="reload();window.document['centro'].src = moto01.src; window.document['iMoto01'].src = moto01.src;"
+            >
+                <img name="iMoto01" src="img/L02Proj/moto01.jpg" height="112" width="150"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onclick="reload();window.document['centro'].src = moto02.src; window.document['iMoto02'].src = moto02.src;"
+            >
+                <img name="iMoto02" src="img/L02Proj/moto02F.jpg" height="112" width="150"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onclick="reload();window.document['centro'].src = moto03.src; window.document['iMoto03'].src = moto03.src;"
+            >
+                <img name="iMoto03" src="img/L02Proj/moto03F.jpg" height="150" width="112"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onclick="reload();window.document['centro'].src = moto04.src; window.document['iMoto04'].src = moto04.src;"
+            >
+                <img name="iMoto04" src="img/L02Proj/moto04F.jpg" height="112" width="150"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onclick="reload();window.document['centro'].src = moto05.src; window.document['iMoto05'].src = moto05.src;"
+            >
+                <img name="iMoto05" src="img/L02Proj/moto05F.jpg" height="150" width="112"/>
+            </a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

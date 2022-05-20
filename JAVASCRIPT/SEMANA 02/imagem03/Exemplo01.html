@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Rollover com Imagem</title>
+<script language="javascript">
+   primeira = new Image()
+   primeira.src = "foto01p.jpg"
+   segunda = new Image()
+   segunda.src = "foto02p.jpg"
+</script> 
+</head>
+<body>
+<h3>Passe com o mouse sobre a imagem - Exemplo 01 </h3>
+<a href="#"
+onmouseover="window.document['imagem'].src = primeira.src"
+onmouseout="window.document['imagem'].src = segunda.src">
+<img src="foto02p.jpg" border=0 name="imagem" width='100px' height='88px'>
+</a>
+</body>
+</html>

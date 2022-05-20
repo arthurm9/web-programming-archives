@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.ccs">
+
+    <title>JS</title>
+</head>
+<body>
+    
+    <!-- Com o manipulador onFocus o usuário poderá criar uma ação sempre que os elementos select, text
+    ou textarea receberem o foco. Ao contrário do evento onBlur que executa ações sempre que o
+    elemento perde o foco.
+        -->
+    
+    <form name="form">
+        Digite seu Nome:
+        <input type="text" name="nome" onFocus="this.value='nome completo'">
+        <br><br>Sua Idade:
+        <input type="text" name="idade" onFocus="this.value='anos'">
+    </form>        
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

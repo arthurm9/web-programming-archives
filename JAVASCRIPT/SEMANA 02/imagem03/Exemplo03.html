@@ -1,0 +1,65 @@
+<html>
+</head>
+<title>Rollover com Imagem</title>
+
+<script language="javascript">
+   fotoumcl = new Image()
+   fotoumcl.src = "foto01p.jpg"
+   fotoumfd = new Image()
+   fotoumfd.src = "foto01pb.png"
+
+   fotodoiscl = new Image()
+   fotodoiscl.src = "foto02p.jpg"
+   fotodoisfd = new Image()
+   fotodoisfd.src = "foto02pb.png"
+
+   fototrescl = new Image()
+   fototrescl.src = "foto03p.jpg"
+   fototresfd = new Image()
+   fototresfd.src = "foto03pb.png"
+
+   fotoquacl = new Image()
+   fotoquacl.src = "foto04p.jpg"
+   fotoquafd = new Image()
+   fotoquafd.src = "foto04pb.png"
+
+   fotocincl = new Image()
+   fotocincl.src = "foto05p.jpg"
+   fotocinfd = new Image()
+   fotocinfd.src = "foto05pb.png"
+
+</script> 
+</head>
+<body>
+<h3>Passe com o mouse sobre a imagem - Exemplo 03 </h3>
+<!--- imagem 01 ---->
+<a href="#"
+onmouseover="window.document['imagem1'].src = fotoumcl.src"
+onmouseout="window.document['imagem1'].src = fotoumfd.src">
+<img src="foto01pb.png" border=0 name="imagem1" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 02 ---->
+<a href="#"
+onmouseover="window.document['imagem2'].src = fotodoiscl.src"
+onmouseout="window.document['imagem2'].src = fotodoisfd.src">
+<img src="foto02pb.png" border=0 name="imagem2" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 03 ---->
+<a href="#"
+onmouseover="window.document['imagem3'].src = fototrescl.src"
+onmouseout="window.document['imagem3'].src = fototresfd.src">
+<img src="foto03pb.png" border=0 name="imagem3" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 04 ---->
+<a href="#"
+onmouseover="window.document['imagem4'].src = fotoquacl.src"
+onmouseout="window.document['imagem4'].src = fotoquafd.src">
+<img src="foto04pb.png" border=0 name="imagem4" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 05 ---->
+<a href="#"
+onmouseover="window.document['imagem5'].src = fotocincl.src"
+onmouseout="window.document['imagem5'].src = fotocinfd.src">
+<img src="foto05pb.png" border=0 name="imagem5" width='100px' height='88px'></a>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 05</title>
+</head>
+<body>
+<h1>Formulário</h1>
+
+<form name="formulario" id="formulario" action="#" method="POST">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome"><strong>Nome:</strong>
+            <input type="text" name="nome" id="nome"/>
+        </label><br/>
+        <label for="endereco"><strong>Endereço:</strong>
+            <input type="text" name="endereco" id="endereco"/>
+        </label><br/>
+        <label for="cidade"><strong>Cidade:</strong>
+            <input type="text" name="cidade" id="cidade"/>
+        </label><br/>
+        <label for="estados"><strong>Estados:</strong>
+            <select name="estados" id="estados">
+                <option value="">Escolha...</option>
+                <option value="SP">São Paulo</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </label><br/>
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>Dados Profissionais</legend>
+        <label><strong>Natureza do Cargo:</strong><br/>
+            <input type="radio" name="natureza" value="Gerência" checked> Gerência
+            <input type="radio" name="natureza" value="Financeiro"> Financeiro
+            <input type="radio" name="natureza" value="Recepção"> Recepção
+            <input type="radio" name="natureza" value="Administrativo"> Administrativo
+            <input type="radio" name="natureza" value="Jurídico"> Jurídico
+        </label> <br/>
+
+        <label><strong>Área de Interesse:</strong><br/>
+            <input type="checkbox" name="area1" value="com"/> Computação
+            <input type="checkbox" name="area2" value="bio"/> Biologia
+            <input type="checkbox" name="area3" value="meio"/> Meio Ambiente
+            <input type="checkbox" name="area4" value="eng"/> Engenharia
+            <input type="checkbox" name="area5" value="hist"/> História
+        </label> <br/>
+
+        <label for="mini-curriculo"><strong>Mini-curriculo:</strong><br/>
+            <textarea id="mini-curriculo" name="minicurriculo"></textarea>
+        </label>
+    </fieldset>
+    <br/>
+
+    <button type="submit" name="salvar" id="salvar" onclick="envia()">Salvar</button>
+    <button type="reset" name="cancelar" id="cancelar">Cancelar</button>
+</form>
+
+<script type="text/javascript">
+    function envia() {
+        if (document.formulario.nome.value == "") {
+            alert("Campo nome está vazio...");
+            return false;
+        } else if (document.formulario.endereco.value == "") {
+            alert("Campo endereco está vazio...");
+            return false;
+        } else if (document.formulario.cidade.value == "") {
+            alert("Campo cidade está vazio...");
+            return false;
+        } else if (document.formulario.estados.value == "") {
+            alert("Selecione um estado...");
+            return false;
+        } else if (document.formulario.natureza.value == "") {
+            alert("Campo   está vazio...");
+            return false;
+        } else if (document.formulario.minicurriculo.value == "") {
+            alert("Campo Mini Curriculo está vazio...");
+            return false;
+        } else if (!(document.formulario.area1.checked || document.formulario.area2.checked || document.formulario.area3.checked || document.formulario.area4.checked || document.formulario.area5.checked)) {
+            alert("Selecione pelo menos uma area de interesse...");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

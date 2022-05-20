@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L02Ex01</title>
+
+    <script type="text/javascript">
+        var num = Math.round(Math.random() * (5 - 1)) + 1;
+        var imagem = new Array();
+        var titulo = new Array();
+
+        imagem[1] = "img/L02Ex01/duck.jpg";
+        titulo[1] = "Duck Hunt";
+        imagem[2] = "img/L02Ex01/mario.jpg";
+        titulo[2] = "Super Mario World";
+        imagem[3] = "img/L02Ex01/mortal.jpg";
+        titulo[3] = "Mortal Kombat";
+        imagem[4] = "img/L02Ex01/pacman.jpg";
+        titulo[4] = "Pac Man";
+        imagem[5] = "img/L02Ex01/sonic.jpg";
+        titulo[5] = "Sonic";
+        var visualizar = imagem[num];
+        var tituloImagem = titulo[num];
+
+        window.onload = function () {
+            var painel = document.getElementById("painel").innerHTML = ("<h1>" + tituloImagem + "</h1><br/>" + "<img src='" + visualizar + "'>");
+        }
+
+    </script>
+</head>
+<body>
+<div style="text-align: center" id="painel">
+
+</div>
+</body>
+</html>

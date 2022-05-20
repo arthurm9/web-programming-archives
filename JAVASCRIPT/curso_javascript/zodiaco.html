@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L03Ex03</title>
+
+    <script type="text/javascript">
+        var nomesCav = new Array("Nomes", "Mu de Áries", "Aldebaran de Touro", "Saga de Gêmeos", "Máscara de Morte de Câncer", "Aioria de Leão", "Shaka de Virgem", "Dohko de Libra", "Miro de Escorpião", "Aioros de Sagitário", "Shura de Capricórnio", "Camus de Aquário", "Afrodite de Peixes");
+        var signos = new Array();
+
+        signos[1] = new Array();
+        signos[1][1] = "Áries";
+        signos[1][2] = "21/03 a 20/04";
+        signos[1][3] = "Um dia que enaltece as finanças, sentimentos e o contato com familiares. Excelente momento para agir mais de acordo com sua sensibilidade e intuição. Percepção de que as questões mais importantes são internas, subjetivas e emocionais."
+
+        signos[2] = new Array();
+        signos[2][1] = "Touro";
+        signos[2][2] = "21/04 a 20/05";
+        signos[2][3] = "omento de se expressar com mais profundidade e emoção. Dia importantíssimo para os relacionamentos e aprofundamento dos vínculos emocionais. Atividades intelectuais em que haja um envolvimento emocional estão estimuladas.";
+
+        signos[3] = new Array();
+        signos[3][1] = "Gêmeos";
+        signos[3][2] = "21/05 a 20/06";
+        signos[3][3] = "Um dia que ressalta o trabalho, saúde e as finanças. Percepção da influência das emoções sobre o bem-estar e a saúde. Momento de apostar mais nos talentos e potenciais, sabendo cultivá-los com criatividade.";
+
+        signos[4] = new Array();
+        signos[4][1] = "Câncer";
+        signos[4][2] = "21/06 a 20/07";
+        signos[4][3] = "O Sol, em movimento pelo seu signo, faz contato com a Lua. O início de semana enaltece os sentimentos, emoções e sensibilidade dos cancerianos. Excelente momento para se desfazer de velhos padrões ou bloqueios emocionais.";
+
+        signos[5] = new Array();
+        signos[5][1] = "Leão";
+        signos[5][2] = "21/07 a 22/08";
+        signos[5][3] = "A fase é positiva para ouvir a intuição e resolver pendências emocionais. Percepção de como as vivências do passado podem ainda estar lhe influenciando. Momento de cultivar mais silêncio, refletir e contemplar.";
+
+        signos[6] = new Array();
+        signos[6][1] = "Virgem";
+        signos[6][2] = "23/08 a 22/09";
+        signos[6][3] = "Relacionamentos, família e amizade são temas preponderantes no momento. Há a capacidade de observar as questões com mais profundidade. Perspicácia de pensamento e é um excelente momento para mudar padrões mentais e emocionais.";
+
+        signos[7] = new Array();
+        signos[7][1] = "Libra";
+        signos[7][2] = "23/09 a 22/10";
+        signos[7][3] = "Carreira, realizações e recursos materiais estão enfatizados neste início de semana. O momento é positivo para você perceber talentos que não foram devidamente utilizados. A relação com o trabalho, com a família e com as raízes emocionais se mostra muito importante.";
+
+        signos[8] = new Array();
+        signos[8][1] = "Escorpião";
+        signos[8][2] = "23/10 a 21/11";
+        signos[8][3] = "Um período muito apropriado para você deixar para trás velhos padrões emocionais. É hora de se confrontar com suas dores, a fim de renascer e se transformar emocionalmente. Você tem recursos internos para lidar com as atuais situações.";
+
+        signos[9] = new Array();
+        signos[9][1] = "Sagitário";
+        signos[9][2] = "22/11 a 21/12";
+        signos[9][3] = "Dia que pede reflexão e observação de suas atitudes e motivações, sagitariano. Espiritualidade, emoções e a compreensão psicológica de suas atitudes estão estimuladas. Belo momento para um corte definitivo com situações que tem causado problema.";
+
+        signos[10] = new Array();
+        signos[10][1] = "Capricórnio";
+        signos[10][2] = "22/12 a 20/01";
+        signos[10][3] = "Um dia muito interessante para relações, associações e contatos. O trabalho em equipe e o envolvimento com causas coletivas estão estimulados. Momento interessante para haver um vínculo mais sensível e afetuoso com as pessoas.";
+
+        signos[11] = new Array();
+        signos[11][1] = "Aquário";
+        signos[11][2] = "21/01 a 19/02";
+        signos[11][3] = "O dia enaltece a carreira, realizações e também a saúde. Excelente momento para superação de antigos padrões e hábitos enraizados. A saúde dos familiares é um tema importante nesta fase.";
+
+        signos[12] = new Array();
+        signos[12][1] = "Peixes";
+        signos[12][2] = "20/02 a 20/03";
+        signos[12][3] = "Afetividade, sensibilidade e emoções são temas enfatizados no momento. É um momento importante para exercer mais a capacidade de acolher, nutrir e proteger. A espiritualidade, autoconhecimento e a criatividade são fatores essenciais.";
+    </script>
+
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .tema-black {
+            background-color: #000;
+            color: #ffffff;
+        }
+
+        .tema-white {
+            background-color: #fff;
+            color: #000;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2b669a;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        #menu {
+            margin: 0 20%;
+            text-align: center;
+            clear: both;
+        }
+
+        #menu ul {
+            padding: 0px;
+            margin: 5px 0px 0px;
+            list-style: none;
+        }
+
+        #menu ul li {
+            display: inline;
+        }
+
+        #menu ul li img {
+            display: block;
+            border-radius: 10px;
+            text-decoration: none;
+            border: 2px solid #2b669a;
+            float: left;
+        }
+
+        #menu ul li a {
+            margin: 5px;
+            float: left;
+            width: 60px;
+            font-size: x-small;
+        }
+
+        #menu ul li a span {
+            display: block;
+            margin: 3px 0px 0px;
+            padding: 0px;
+            font-weight: bold;
+            float: left;
+            width: 60px;
+        }
+
+        #painel {
+            display: flex;
+        }
+
+        .imgCentro {
+            width: 30%;
+        }
+
+        .textoBlack {
+            background: #000000;
+            text-align: justify;
+            font-size: 30px;
+            padding: 15px;
+            width: 50%;
+            color: #ffffff;
+        }
+
+        .textoBlack h3 {
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
+            color: #2b669a;
+        }
+
+        .textoBlack h5 {
+            text-align: right;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .textoWhite {
+            text-align: justify;
+            background: #ffffff;
+            border: 2px solid #2b669a;
+            border-radius: 10px;
+            text-align: justify;
+            font-size: 30px;
+            padding: 15px;
+            width: 50%;
+            color: #000000;
+        }
+
+        .textoWhite h3 {
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
+            color: #761c19;
+        }
+
+        .textoWhite h5 {
+            text-align: right;
+            margin: 0px;
+            padding: 0px;
+            color: #2b669a;
+        }
+
+        button {
+            background: #4CAF50;
+            border: none;
+            color: #ffffff;
+            padding: 15px 15px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .ocultar {
+            display: none;
+        }
+    </style>
+</head>
+<body id="corpo" class="tema-black">
+<h1>Horóscopo dos Cavaleiros do Zodíaco</h1>
+<nav id="menu">
+    <ul>
+        <li>
+            <a href="#" onclick="trocaSigno('01')">
+                <img name="sig01" src="img/L03Ex01/arm150/01.png" height="60" width="60"/>
+                <span>Áries</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('02')">
+                <img name="sig02" src="img/L03Ex01/arm150/02p.png" height="60" width="60"/>
+                <span>Touro</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('03')">
+                <img name="sig03" src="img/L03Ex01/arm150/03p.png" height="60" width="60"/>
+                <span>Gêmeos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('04')">
+                <img name="sig04" src="img/L03Ex01/arm150/04p.png" height="60" width="60"/>
+                <span>Câncer</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('05')">
+                <img name="sig05" src="img/L03Ex01/arm150/05p.png" height="60" width="60"/>
+                <span>Leão</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('06')">
+                <img name="sig06" src="img/L03Ex01/arm150/06p.png" height="60" width="60"/>
+                <span>Virgem</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('07')">
+                <img name="sig07" src="img/L03Ex01/arm150/07p.png" height="60" width="60"/>
+                <span>Libra</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('08')">
+                <img name="sig08" src="img/L03Ex01/arm150/08p.png" height="60" width="60"/>
+                <span>Escorpião</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('09')">
+                <img name="sig09" src="img/L03Ex01/arm150/09p.png" height="60" width="60"/>
+                <span>Sagitário</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('10')">
+                <img name="sig10" src="img/L03Ex01/arm150/10p.png" height="60" width="60"/>
+                <span>Capricórnio</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('11')">
+                <img name="sig11" src="img/L03Ex01/arm150/11p.png" height="60" width="60"/>
+                <span>Aquário</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" onclick="trocaSigno('12')">
+                <img name="sig12" src="img/L03Ex01/arm150/12p.png" height="60" width="60"/>
+                <span>Peixes</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<br/>
+<hr/>
+<div style="text-align: center; " id="painel">
+    <div id="centro" class="imgCentro">
+        <img name="centro" src="img/L03Ex01/cav/01.jpg" width="300"/>
+        <p id="nomeCavaleiro">Mu de Áries</p>
+    </div>
+    <div id="texto" class="textoBlack">
+        <h3 id="nomeSigno">Áries</h3>
+        <h5 id="dataSigno">21/03 a 20/04</h5>
+        <hr/>
+        <p id="textoSigno">
+            Um dia que enaltece as finanças, sentimentos e o contato com familiares. Excelente momento para agir mais de
+            acordo com sua sensibilidade e intuição. Percepção de que as questões mais importantes são internas,
+            subjetivas
+            e emocionais.
+        </p>
+    </div>
+</div>
+<div id="botoes" style="margin-top: 10px">
+    <button type="button" onclick="ocultaImagem()">Oculta / Apresenta Personagem</button>
+    <button type="button" onclick="mudaTema();">Muda Tema</button>
+    <button type="button" onclick="mudaTemaPrevisao()">Muda Tema Previsão</button>
+</div>
+
+<script type="text/javascript">
+
+    function ocultaImagem() {
+        var display = document.getElementById("centro").style.display;
+        if (display == "none") {
+            document.getElementById("centro").style.display = 'block';
+            document.getElementById("texto").style.width = '50%';
+            document.getElementById("texto").style.marginLeft = '0%';
+            document.getElementById("texto").style.marginRight = '0%';
+        } else {
+            document.getElementById("centro").style.display = 'none';
+            document.getElementById("texto").style.width = '80%';
+            document.getElementById("texto").style.marginLeft = '20%';
+            document.getElementById("texto").style.marginRight = '20%';
+        }
+    }
+    
+    function mudaTema() {
+        var elemento = document.getElementById("corpo");
+        if (elemento.className == "tema-black") {
+            elemento.className = "tema-white";
+        }
+        else {
+            elemento.className = "tema-black";
+        }
+    }
+
+    function mudaTemaPrevisao() {
+        var elemento = document.getElementById("texto");
+        if (elemento.className == "textoBlack") {
+            elemento.className = "textoWhite";
+        }
+        else {
+            elemento.className = "textoBlack";
+        }
+    }
+
+    function resetIMGs() {
+        for (i = 1; i < 13; i++) {
+            var imgArm = new Image();
+            if (i < 10) {
+                imgArm.src = "img/L03Ex01/arm150/0" + i + "p.png";
+                window.document['sig0' + i].src = imgArm.src;
+            } else {
+                imgArm.src = "img/L03Ex01/arm150/" + i + "p.png";
+                window.document['sig' + i].src = imgArm.src;
+            }
+        }
+    }
+
+    function trocaSigno(num) {
+        var imgCentro = new Image();
+        imgCentro.src = "img/L03Ex01/cav/" + num + ".jpg";
+        window.document['centro'].src = imgCentro.src;
+
+        resetIMGs();
+
+        var imgArm = new Image();
+        imgArm.src = "img/L03Ex01/arm150/" + num + ".png";
+        window.document['sig' + num].src = imgArm.src;
+
+        document.getElementById('nomeCavaleiro').innerHTML = nomesCav[parseInt(num)];
+
+        document.getElementById('nomeSigno').innerHTML = signos[parseInt(num)][1];
+        document.getElementById('dataSigno').innerHTML = signos[parseInt(num)][2];
+        document.getElementById('textoSigno').innerHTML = signos[parseInt(num)][3];
+    }
+</script>
+</body>
+</html>

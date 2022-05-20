@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+
+    <script type="text/javascript">
+        var barcos = new Array();
+        var imgs = new Array();
+        var alvos = new Array();
+
+        window.onload = function () {
+            var barco1 = new Image();
+            barco1.src = "img/L02bn/Ship-1.png";
+
+            barcos[1] = "img/L02bn/Ship-1.png";
+            barcos[2] = "img/L02bn/Ship-1.png";
+            barcos[3] = "img/L02bn/Ship-1.png";
+            barcos[4] = "img/L02bn/Ship-1.png";
+            barcos[5] = "img/L02bn/Ship-2.png";
+            barcos[6] = "img/L02bn/Ship-2.png";
+            barcos[7] = "img/L02bn/Ship-2.png";
+            barcos[8] = "img/L02bn/Ship-2.png";
+            barcos[9] = "img/L02bn/Ship-3.png";
+            barcos[10] = "img/L02bn/Ship-3.png";
+            barcos[11] = "img/L02bn/Ship-3.png";
+            barcos[12] = "img/L02bn/Ship-3.png";
+
+            for (i = 1; i < 13; i++) {
+                alvos[i] = Math.round(Math.random() * (100 - 1)) + 1;
+            }
+            console.log(alvos);
+        }
+
+        function atirar(name) {
+            for (i = 1; i < 13; i++) {
+                if (alvos[i] == parseInt(name)) {
+                    var img = new Image();
+                    img.src = barcos[i];
+                    window.document[name].src = img.src;
+                    window.document[name].style.backgroundColor = "red";
+                    break;
+                } else {
+                    var img = new Image();
+                    img.src = "img/L02bn/Wave.png"
+                    window.document[name].src = img.src;
+                    window.document[name].style.backgroundColor = "#a6e1ec";
+                }
+            }
+        }
+
+    </script>
+
+    <style type="text/css">
+        table {
+            border: 1px solid #9d9d9d;
+        }
+
+        table th {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #9d9d9d;
+            font-size: 30px;
+            background-color: #c1e2b3;
+        }
+
+        table td {
+            border: 1px solid #9d9d9d;
+        }
+    </style>
+</head>
+<body>
+<table style="text-align: center">
+    <thead>
+    <tr>
+        <th></th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>A</th>
+        <td><a href="#"><img name="1" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="2" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="3" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="4" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="5" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="6" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="7" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="8" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="9" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="10" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>B</th>
+        <td><a href="#"><img name="11" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="12" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="13" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="14" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="15" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="16" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="17" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="18" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="19" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="20" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>C</th>
+        <td><a href="#"><img name="21" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="22" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="23" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="24" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="25" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="26" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="27" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="28" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="29" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="30" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>D</th>
+        <td><a href="#"><img name="31" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="32" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="33" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="34" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="35" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="36" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="37" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="38" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="39" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="40" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>E</th>
+        <td><a href="#"><img name="41" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="42" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="43" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="44" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="45" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="46" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="47" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="48" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="49" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="50" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>F</th>
+        <td><a href="#"><img name="51" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="52" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="53" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="54" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="55" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="56" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="57" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="58" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="59" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="60" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>G</th>
+        <td><a href="#"><img name="61" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="62" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="63" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="64" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="65" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="66" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="67" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="68" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="69" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="70" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>H</th>
+        <td><a href="#"><img name="71" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="72" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="73" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="74" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="75" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="76" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="77" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="78" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="79" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="80" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>I</th>
+        <td><a href="#"><img name="81" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="82" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="83" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="84" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="85" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="86" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="87" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="88" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="89" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="90" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    <tr>
+        <th>J</th>
+        <td><a href="#"><img name="91" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="92" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="93" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="94" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="95" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="96" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="97" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="98" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="99" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+        <td><a href="#"><img name="100" onclick="atirar(this.name)" src="img/L02bn/Fire-icon.png" height="70" width="70"/></a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

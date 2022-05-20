@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+        var num = 5;
+        var limite = 10;
+        var html = "<h1>Tabuado do " + num + "</h1>";
+        html += "<table border='1px'> <thead><tr><th>Calculo</th><th>Resultado</th></tr></thead><tbody>";
+        for (i = 0; i <= limite; i++) {
+            html += "<tr> <td>" + num + " * " + i + " =</td>";
+            html += "<td>" + (num * i) + "</td></tr>";
+        }
+        html += "</tbody></table>";
+        document.write(html);
+    </script>
+</head>
+<body>
+</body>
+</html>

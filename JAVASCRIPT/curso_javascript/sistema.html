@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>L02Ex03</title>
+
+    <script type="text/javascript">
+        img01_96 = new Image()
+        img01_96.src = "img/L02Ex03/AndroidLollipop/x96/Settings.png"
+        img01_144 = new Image()
+        img01_144.src = "img/L02Ex03/AndroidLollipop/x144/Settings.png"
+        img01_256 = new Image()
+        img01_256.src = "img/L02Ex03/AndroidLollipop/x256/Settings.png"
+        function img01() {
+            window.document['settings'].src = img01_144.src;
+            window.document['centro'].src = img01_256.src
+        }
+
+        img02_96 = new Image()
+        img02_96.src = "img/L02Ex03/AndroidLollipop/x96/Phone.png"
+        img02_144 = new Image()
+        img02_144.src = "img/L02Ex03/AndroidLollipop/x144/Phone.png"
+        img02_256 = new Image()
+        img02_256.src = "img/L02Ex03/AndroidLollipop/x256/Phone.png"
+        function img02() {
+            window.document['phone'].src = img02_144.src;
+            window.document['centro'].src = img02_256.src
+        }
+
+        img03_96 = new Image()
+        img03_96.src = "img/L02Ex03/AndroidLollipop/x96/Google.png"
+        img03_144 = new Image()
+        img03_144.src = "img/L02Ex03/AndroidLollipop/x144/Google.png"
+        img03_256 = new Image()
+        img03_256.src = "img/L02Ex03/AndroidLollipop/x256/Google.png"
+        function img03() {
+            window.document['google'].src = img03_144.src;
+            window.document['centro'].src = img03_256.src
+        }
+
+        img04_96 = new Image()
+        img04_96.src = "img/L02Ex03/AndroidLollipop/x96/Drive.png"
+        img04_144 = new Image()
+        img04_144.src = "img/L02Ex03/AndroidLollipop/x144/Drive.png"
+        img04_256 = new Image()
+        img04_256.src = "img/L02Ex03/AndroidLollipop/x256/Drive.png"
+        function img04() {
+            window.document['drive'].src = img04_144.src;
+            window.document['centro'].src = img04_256.src
+        }
+
+        img05_96 = new Image()
+        img05_96.src = "img/L02Ex03/AndroidLollipop/x96/PlayGames.png"
+        img05_144 = new Image()
+        img05_144.src = "img/L02Ex03/AndroidLollipop/x144/PlayGames.png"
+        img05_256 = new Image()
+        img05_256.src = "img/L02Ex03/AndroidLollipop/x256/PlayGames.png"
+        function img05() {
+            window.document['play'].src = img05_144.src;
+            window.document['centro'].src = img05_256.src
+        }
+
+        img06_96 = new Image()
+        img06_96.src = "img/L02Ex03/AndroidLollipop/x96/Keep.png"
+        img06_144 = new Image()
+        img06_144.src = "img/L02Ex03/AndroidLollipop/x144/Keep.png"
+        img06_256 = new Image()
+        img06_256.src = "img/L02Ex03/AndroidLollipop/x256/Keep.png"
+        function img06() {
+            window.document['keep'].src = img06_144.src;
+            window.document['centro'].src = img06_256.src
+        }
+
+        img07_96 = new Image()
+        img07_96.src = "img/L02Ex03/AndroidLollipop/x96/Email.png"
+        img07_144 = new Image()
+        img07_144.src = "img/L02Ex03/AndroidLollipop/x144/Email.png"
+        img07_256 = new Image()
+        img07_256.src = "img/L02Ex03/AndroidLollipop/x256/Email.png"
+        function img07() {
+            window.document['email'].src = img07_144.src;
+            window.document['centro'].src = img07_256.src
+        }
+
+        img08_96 = new Image()
+        img08_96.src = "img/L02Ex03/AndroidLollipop/x96/Tranlate.png"
+        img08_144 = new Image()
+        img08_144.src = "img/L02Ex03/AndroidLollipop/x144/Tranlate.png"
+        img08_256 = new Image()
+        img08_256.src = "img/L02Ex03/AndroidLollipop/x256/Tranlate.png"
+        function img08() {
+            window.document['tranlate'].src = img08_144.src;
+            window.document['centro'].src = img08_256.src
+        }
+
+        img09_96 = new Image()
+        img09_96.src = "img/L02Ex03/AndroidLollipop/x96/Calculator.png"
+        img09_144 = new Image()
+        img09_144.src = "img/L02Ex03/AndroidLollipop/x144/Calculator.png"
+        img09_256 = new Image()
+        img09_256.src = "img/L02Ex03/AndroidLollipop/x256/Calculator.png"
+        function img09() {
+            window.document['calculator'].src = img09_144.src;
+            window.document['centro'].src = img09_256.src
+        }
+
+        img10_96 = new Image()
+        img10_96.src = "img/L02Ex03/AndroidLollipop/x96/Clock.png"
+        img10_144 = new Image()
+        img10_144.src = "img/L02Ex03/AndroidLollipop/x144/Clock.png"
+        img10_256 = new Image()
+        img10_256.src = "img/L02Ex03/AndroidLollipop/x256/Clock.png"
+        function img10() {
+            window.document['clock'].src = img10_144.src;
+            window.document['centro'].src = img10_256.src
+        }
+    </script>
+    <style type="text/css">
+        #menu {
+            text-align: center;
+        }
+
+        #menu ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        #menu ul li {
+            display: inline;
+        }
+
+        #menu ul li img {
+            padding: 2px 10px;
+            display: inline-block;
+
+            /* visual do link */
+            background-color: #EDEDED;
+            border-radius: 10px;
+            text-decoration: none;
+            border-bottom: 3px solid #EDEDED;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center; height: 256px;" id="painel">
+    <img name="centro" src=""/>
+</div>
+<br/>
+<hr/>
+<nav id="menu">
+    <ul>
+        <li>
+            <a href="#"
+               onmouseover="img01()"
+               onmouseout="window.document['settings'].src = img01_96.src">
+                <img name="settings" src="img/L02Ex03/AndroidLollipop/x96/Settings.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img02()"
+               onmouseout="window.document['phone'].src = img02_96.src">
+                <img name="phone" src="img/L02Ex03/AndroidLollipop/x96/Phone.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img03()"
+               onmouseout="window.document['google'].src = img03_96.src">
+                <img name="google" src="img/L02Ex03/AndroidLollipop/x96/Google.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img04()"
+               onmouseout="window.document['drive'].src = img04_96.src">
+                <img name="drive" src="img/L02Ex03/AndroidLollipop/x96/Drive.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img05()"
+               onmouseout="window.document['play'].src = img05_96.src">
+                <img name="play" src="img/L02Ex03/AndroidLollipop/x96/PlayGames.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img06()"
+               onmouseout="window.document['keep'].src = img06_96.src">
+                <img name="keep" src="img/L02Ex03/AndroidLollipop/x96/Keep.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img07()"
+               onmouseout="window.document['email'].src = img07_96.src">
+                <img name="email" src="img/L02Ex03/AndroidLollipop/x96/Email.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img08()"
+               onmouseout="window.document['tranlate'].src = img08_96.src">
+                <img name="tranlate" src="img/L02Ex03/AndroidLollipop/x96/Tranlate.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img09()"
+               onmouseout="window.document['calculator'].src = img09_96.src">
+                <img name="calculator" src="img/L02Ex03/AndroidLollipop/x96/Calculator.png"/>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               onmouseover="img10()"
+               onmouseout="window.document['clock'].src = img10_96.src">
+                <img name="clock" src="img/L02Ex03/AndroidLollipop/x96/Clock.png"/>
+            </a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

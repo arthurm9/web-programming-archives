@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Rollover com Imagem</title>
+<script language="javascript">
+   foto1g = new Image()
+   foto1g.src = "foto01g.jpg"
+
+   foto2g = new Image()
+   foto2g.src = "foto02g.jpg"
+
+   foto3g = new Image()
+   foto3g.src = "foto03g.jpg"
+
+   foto4g = new Image()
+   foto4g.src = "foto04g.jpg"
+
+   foto5g = new Image()
+   foto5g.src = "foto05g.jpg"
+
+</script> 
+</head>
+<body>
+<h3>Passe com o mouse sobre a imagem - Exemplo 04 </h3>
+<!--- imagem 01 ---->
+<a href="#"
+onmouseover="window.document['centro'].src = foto1g.src">
+<img src="foto01p.jpg" border=0 name="imagem" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 02 ---->
+<a href="#"
+onmouseover="window.document['centro'].src = foto2g.src">
+<img src="foto02p.jpg" border=0 name="imagem" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 03 ---->
+<a href="#"
+onmouseover="window.document['centro'].src = foto3g.src">
+<img src="foto03p.jpg" border=0 name="imagem" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 04 ---->
+<a href="#"
+onmouseover="window.document['centro'].src = foto4g.src">
+<img src="foto04p.jpg" border=0 name="imagem" width='100px' height='88px'></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--- imagem 05 ---->
+<a href="#"
+onmouseover="window.document['centro'].src = foto5g.src">
+<img src="foto05p.jpg" border=0 name="imagem" width='100px' height='88px'></a>
+<br>
+<img src="foto01g.jpg" name="centro" width=350></img>
+</body>
+</html>

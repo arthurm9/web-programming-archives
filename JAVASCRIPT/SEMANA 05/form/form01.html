@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function requer(texto){
+	if (texto==""){
+		alert("Favor preencher o campo Nome!")
+	}
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+	Digite seu Nome:
+	<input type="text" name="nome" 	onChange="this.value=this.value.toUpperCase()" onBlur="requer(this.value)">
+	<br><br>Digite seu Sobrenome:
+	<input type="text" name="sobrenome">
+</form>
+</body>
+</html>

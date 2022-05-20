@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function acessa(){
+
+	if (formulario.cps.checked){
+			alert("Centro Paula Souza");
+			formulario.cps.checked = false;
+	}else if (formulario.cetec.checked){
+			alert("CETEC - Capacitações");
+			formulario.cetec.checked = false;
+	}
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+	<input type="radio" name="cps" onClick="acessa()">CPS
+	<input type="radio" name="cetec" onClick="acessa()">CETEC
+</form>
+</body>
+</html>

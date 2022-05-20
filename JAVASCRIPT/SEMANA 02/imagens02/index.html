@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Teste de imagens </title>
+<script type="text/javascript">
+var x=0;
+var imagem=new Array();
+imagem[0]="home/foto01.jpg";
+imagem[1]="home/foto02.jpg";
+imagem[2]="home/foto03.jpg";
+imagem[3]="home/foto04.jpg";
+imagem[4]="home/foto05.jpg";
+function mudar_banner(){
+document.getElementById("banner").src=imagem[x];
+x++;
+if (x==5){ 				// aqui compara x com a quantidade total de imagens que tem
+         x=0;
+    }
+}
+setInterval('mudar_banner()',2000);
+</script>
+</head>
+<body>
+<h3>Aguarde o intervalo de tempo ... </h3>
+	<img id="banner" src="home/foto01.jpg">
+</body>
+</html>

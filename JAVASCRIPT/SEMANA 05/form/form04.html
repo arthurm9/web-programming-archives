@@ -1,0 +1,19 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function exemplo(form){
+	teste=formulario.opcao1.checked;
+	alert("A caixa de verificação 01 está "+teste);
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+<input type="checkbox" name="opcao1">Primeira Opção<br>
+<input type="checkbox" name="opcao2">Segunda Opção
+<br><br>
+<input type="button" name="acao" value="Execute" onClick="exemplo(this.form)">
+</form>
+</body>
+</html>

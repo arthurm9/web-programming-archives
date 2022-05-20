@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 06 - 01</title>
+</head>
+<body>
+<h1>Cadastro de Funcionário</h1>
+
+<form name="formulario" id="formulario" action="#" method="POST" onsubmit="return envia()">
+    <fieldset>
+        <legend>Detalhes Pessoais</legend>
+        <label for="nome"><strong>Nome:</strong>
+            <input type="text" name="nome" id="nome"/>
+        </label><br/>
+        <label for="sobrenome"><strong>Sobrenome:</strong>
+            <input type="text" name="sobrenome" id="sobrenome"/>
+        </label><br/>
+        <label for="dtnasc"><strong>Data de Nascimento:</strong>
+            <input type="date" name="dtnasc" id="dtnasc"/>
+        </label><br/>
+
+    </fieldset>
+    <br/>
+    <fieldset>
+        <legend>Detalhes Profissionais</legend>
+        <label for="departamento"><strong>Departamento:</strong>
+            <select name="departamento" id="departamento">
+                <option value="">Escolha...</option>
+                <option value="Admin">Administração</option>
+                <option value="RH">Recursos Humanos</option>
+                <option value="Contabil">Contabilidade</option>
+                <option value="Vendas">Vendas e Marketing</option>
+            </select>
+        </label><br/>
+
+        <label for="codigo"><strong>Código do Funcionário:</strong>
+            <input type="text" name="codigo" id="codigo"/>
+        </label>
+    </fieldset>
+    <br/>
+
+    <button type="submit" name="salvar" id="salvar">Salvar</button>
+    <button type="reset" name="cancelar" id="cancelar">Cancelar</button>
+</form>
+<script type="text/javascript">
+    function envia() {
+        if (document.formulario.nome.value == "") {
+            alert("Campo nome não está preenchido");
+            return false;
+        } else if (document.formulario.sobrenome.value == "") {
+            alert("Campo sobrenome não está preenchido");
+            return false;
+        } else if (document.formulario.codigo.value == "") {
+            alert("Campo codigo não está preenchido");
+            return false;
+        } else if (document.formulario.departamento.value == "") {
+            alert("selecione um departamento");
+            return false;
+        } else if (document.formulario.dtnasc.value == "") {
+            alert("Campo data de nascimento não está preenchido");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

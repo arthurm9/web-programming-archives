@@ -1,0 +1,22 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function envia(){
+	if (formulario.nome.value==""){
+		alert("Campo em Branco");
+		return(false);
+	} else {
+		return(true);
+	}
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+Digite seu Nome:
+<input type="text" name="nome"><br>
+<input type="submit" value="Clique Aqui" onClick="envia()">
+</form>
+</body>
+</html>

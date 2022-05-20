@@ -1,0 +1,44 @@
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>L03Ex03</title>
+
+    <script type="text/javascript" src="js/core.js"></script>
+
+    <style type="text/css">
+        #adventure {
+            height: 100px;
+            width: 80px;
+            background-image: url(img/L03Ex02/adven.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var adventure = {
+            init: function () {
+                adventure.div = document.getElementById("adventure");
+                adventure.frameWidth = 80;
+                adventure.frames = 9;
+                adventure.offsetX = 0;
+
+                adventure.animar();
+            },
+            animar: function () {
+                adventure.offsetX -= adventure.frameWidth;
+
+                if (adventure.offsetX <= -adventure.frameWidth * adventure.frames) {
+                    adventure.offsetX = 0;
+                }
+                adventure.div.style.backgroundPosition = adventure.offsetX + " 0px";
+                setTimeout(adventure.animar, 175);
+            }
+        };
+        Core.start(adventure);
+    </script>
+</head>
+<body>
+<div id="adventure"></div>
+</body>
+</html>

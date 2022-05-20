@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.ccs">
+
+    <title>JS</title>
+</head>
+<body>
+    <!-- Funções Math. 
+        Retorna um número aleatório entre 0 (inclusivo) e 1 (exclusivo)
+         return Math.random();
+
+        Retorna um número aleatório min (inclusivo) e max (exclusivo)
+         return Math.random() * (max - min) + min;
+
+        A função Math.round() retorna o valor de um número arredondado para o inteiro mais próximo.
+
+        Math. Round arredondando o valor de retorno de Math.random
+        return Math.round (Math.random() * (max - min)) + min
+    -->
+
+    <img id="banner" src="home/foto01.jpg">
+
+    <script>
+        var x=0;
+
+        var imagem=new Array();
+        imagem[0]="home/foto01.jpg";
+        imagem[1]="home/foto02.jpg";
+        imagem[2]="home/foto03.jpg";
+        imagem[3]="home/foto04.jpg";
+        imagem[4]="home/foto05.jpg";
+
+        function mudar_banner(){
+            document.getElementById("banner").src=imagem[x];
+            x++;
+
+            if (x==5){ // aqui compara x com a quantidade total de imagens que tem
+                x=0; // Atingindo o limite, retorna ao 0.
+            }
+        }
+
+        setInterval('mudar_banner()',2000); // Define um intervalo em milisegundos para a troca de banner.
+    </script>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

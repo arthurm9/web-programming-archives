@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Testando cor de fonte e página</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+    <script type="text/javascript">
+        function mudaCor(elem, cor) {
+            var obj = document.getElementById(elem);
+            if (elem == "frase") {
+                obj.style.color = cor;
+            } else {
+                obj.style.backgroundColor = cor;
+            }
+
+        }
+    </script>
+
+</head>
+<body id="pagina">
+<div class="container">
+
+    <h1 id="frase">Testando cor de fonte e página</h1>
+    <br/>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mudar a Cor da Fonte</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <button class="btn btn-default btn-block" style="background:#2ecc71" onclick="mudaCor('frase', '#2ecc71')">Verde</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#3498db" onclick="mudaCor('frase', '#3498db')">Azul</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#8e44ad" onclick="mudaCor('frase', '#8e44ad')">Roxo</button>
+                        <br/>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <button class="btn btn-default btn-block" style="background:#f1c40f" onclick="mudaCor('frase', '#f1c40f')">Amarelo</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#d35400" onclick="mudaCor('frase', '#d35400')">Laranja</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#c0392b" onclick="mudaCor('frase', '#c0392b')">Vermelho</button>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Mudar a Cor da Página</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <button class="btn btn-default btn-block" style="background:#2ecc71" onclick="mudaCor('pagina', '#2ecc71')">Verde</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#3498db" onclick="mudaCor('pagina', '#3498db')">Azul</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#8e44ad" onclick="mudaCor('pagina', '#8e44ad')">Roxo</button>
+                        <br/>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <button class="btn btn-default btn-block" style="background:#f1c40f" onclick="mudaCor('pagina', '#f1c40f')">Amarelo</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#d35400" onclick="mudaCor('pagina', '#d35400')">Laranja</button>
+                        <br/>
+                        <button class="btn btn-default btn-block" style="background:#c0392b" onclick="mudaCor('pagina', '#c0392b')">Vermelho</button>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

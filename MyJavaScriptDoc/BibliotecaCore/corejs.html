@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.ccs">
+
+    <title>JS</title>
+</head>
+<body>
+    <!-- A biblioteca Core engloba todas as funções dentro de um objeto JavaScript, tornando-os métodos
+    desse objeto, anteriormente as funções eram englobadas dentro de um objeto JavaScript usando
+    um objeto literal.
+        -->
+    
+    <p> Pequisando sobre JavaScript.
+        <a id='wiki' href='https://pt.wikipedia.org/wiki/JavaScript'>Clique Aqui !!!<a>
+    </p>
+
+    <script>
+        /*
+        var Core = {};
+            meuobjeto.método01:function(...){
+        ...
+        };
+            meuobjeto.método02:function(...){
+        ...
+        }; */
+
+        /* Usamos o método start da biblioteca Core para executar o método init de um script assim que o documento 
+        tenha terminado de carregar. 
+        Exemplo: */
+        var script = {
+        init: function(){
+        },
+        };
+        Core.start(script);
+        // --------------------------------------------------------------------------------------------------------//
+        
+        var linkwiki = {
+            init: function(){ // Inicia a função.
+                var link = document.getElementById('wiki');
+                link.onclick = linkwiki.cliqueaqui;
+            },
+            cliqueaqui:function(){
+                alert("Cuidado com o que procura!!!");
+            }
+        };
+        Core.start(linkwiki); 
+
+    </script>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/BibliotecaCore/core.js"></script>
+</body>
+</html>

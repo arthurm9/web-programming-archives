@@ -1,0 +1,25 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function teste(){
+	if (formulario.caixa1.checked){
+		formulario.campo1.value="caixa1"
+	} else if (formulario.caixa2.checked){
+		formulario.campo1.value="caixa2"
+	} else if (formulario.caixa3.checked){
+		formulario.campo1.value="caixa3"
+	}
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+	<input type="checkbox" name="caixa1" onClick="teste()">caixa1<br>
+	<input type="checkbox" name="caixa2" onClick="teste()">caixa2<br>
+	<input type="checkbox" name="caixa3" onClick="teste()">caixa3<br>
+	<br>
+	<input type="text" name="campo1">
+</form>
+</body>
+</html>

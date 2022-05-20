@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var html = "<h3>Resultado:</h3><p> ";
+
+        function fatorialRecusiva(n) {
+            if (n == 0) {
+                html += n;
+                return 1
+            } else {
+                var r = n * fatorialRecusiva(n - 1);
+                html += " * " + n;
+                return r;
+            }
+        }
+
+        function escreveFatorial(n) {
+            html += n + "! = ";
+            var r = fatorialRecusiva(n);
+            html = (html + " = " + r + "</p>");
+
+            var r = document.getElementById("resultado").innerHTML = html;
+
+            html = "<h3>Resultado:</h3><p> ";
+        }
+    </script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="container">
+
+<h1>Calcular a fatorial de forma recursiva</h1>
+<hr/>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Escolha o valor a calcular</h3>
+            </div>
+            <div class="panel-body">
+                <button class="btn btn-default btn-block" onclick="escreveFatorial(2)">02</button>
+                <button class="btn btn-default btn-block" onclick="escreveFatorial(5)">05</button>
+                <button class="btn btn-default btn-block" onclick="escreveFatorial(6)">06</button>
+                <button class="btn btn-default btn-block" onclick="escreveFatorial(8)">08</button>
+                <button class="btn btn-default btn-block" onclick="escreveFatorial(10)">10</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6" id="resultado">
+    </div>
+</div>
+
+</body>
+</html>

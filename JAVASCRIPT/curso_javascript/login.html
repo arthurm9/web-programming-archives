@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <title>Atividade 05 - 01</title>
+</head>
+<body>
+<h1>Formulário de Login</h1>
+
+<form name="login" id="login" action="#" method="POST">
+    <label><strong>E-mail:</strong></label><br/>
+    <input type="email" name="email" id="email" placeholder="Digite o E-mail de Login..."/><br/>
+    <br/>
+    <label><strong>Senha:</strong></label><br/>
+    <input type="password" name="senha" id="senha" placeholder="Digite a Senha de Login..."/><br/>
+    <br/>
+    <button type="submit" name="logar" id="logar" onclick="envia()">Efetuar Login</button>
+    <button type="reset" name="cancelar" id="cancelar">Cancelar</button>
+</form>
+<script type="text/javascript">
+    function envia() {
+        if (document.login.email.value == "") {
+            alert("Campo de e-mail vazio...");
+            return false;
+        } else if (document.login.senha.value == "") {
+            alert("Campo de Senha Vazio...");
+            return false;
+        } else {
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<title> Aula de JavaScript - FORM </title>
+<script type="text/javascript">
+function acessa(texto){
+		alert(texto);
+}
+</script>
+</head>
+<body>
+<form name="formulario">
+<select name="lista" onChange="acessa(lista.options[selectedIndex].value)">
+	<option value="Nada selecionado" selected>Escolha uma opção</option>
+	<option value="CPS">CPS </option>
+	<option value="CETEC">CETEC </option>
+</select>
+</form>
+</body>
+</html>
